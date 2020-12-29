@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Structure">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <link rel="shortcut icon" href="img/favicon.png">
+        <link rel="stylesheet" href="css/default.min.css">
+        <link rel="stylesheet" href="css/monokai_sublime.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <title>Uso de time</title>
+    </head>
+    <body>
+        <header>
+            <h1>14.1.15 Uso de la etiqueta time</h1>
+        </header>
+        <nav>
+            <a href="#" class="extern">Inicio</a>
+            <a href="#" class="extern">Contactos</a>
+            <a href="#" class="extern">Ayuda</a>
+        </nav>
+        <main>
+            <section>
+                <article>
+                    <p>El elemento &lt;time&gt; representa un preriodo en el tiempo. Puede incluir el atributo <b>datetime</b>
+                    para convertir las fechas en un formato interno legible por un ordenador, permitiendo mejores resultados en
+                    los motores de búsqueda o caracteristicas personalizadas como recordatorios.</p>
+                    <p>Puede representar uno de los contenidos siguientes:
+                        <ul>
+                            <li>Una hora en formato de 24 horas.</li>
+                            <li>Una fecha en el <a href="https://es.wikipedia.org/wiki/Calendario_gregoriano">Calendario Gregoriano</a> 8con hora y zona horaria opcionales)</li>
+                            <li><a href="https://www.w3.org/TR/2014/REC-html5-20141028/infrastructure.html#valid-duration-string">Un periodo de tiempo válido</a></li>
+                        </ul>
+                    </p>
+                    <p>Ejemplo de uso:</p>
+                    <p>The Cure will be celebrating their 40th anniversary on <b><time datetime="2018-07-07">July 7</time></b> in London's Hyde Park.</p>
+                    <p>The concert starts at <b><time datetime="20:00">20:00</time></b> and you'll be able to enjoy the band for at least <b><time datetime="PT2H30M">2h 30m</time></b>.</p>
+                    <pre>
+                        <code>
+                            <!--&lt;&gt;-->
+    &lt;p&gt;
+        The Cure will be celebrating their 40th anniversary on &lt;b&gt;&lt;time datetime="2018-07-07">July 7&lt;/time&gt;&lt;/b&gt; in London's Hyde Park.
+    &lt;/p&gt;
+    &lt;p&gt;
+        The concert starts at &lt;b&gt;&lt;time datetime="20:00">20:00&lt;/time&gt;&lt;/b&gt; and you'll be able to enjoy the band for at least &lt;b&gt;&lt;time datetime="PT2H30M"&gt;2h 30m&lt;/time&gt;</b>.
+    &lt;/p&gt;
+                        </code>
+                    </pre>
+                </article>
+            </section>
+            <aside>
+                <a href="#" class="nav-link">Extern 1</a>
+                <a href="#" class="nav-link">Extern 2</a>
+                <a href="#" class="nav-link">Extern 3</a>
+            </aside>
+        </main>
+        <footer>
+            <span>Sitio web: <address>jhondev-code.github.io</address></span>
+            <small id="reserved">&copy;Derechos reservados 2020</small>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Structure">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <link rel="shortcut icon" href="img/favicon.png">
+        <link rel="stylesheet" href="css/default.min.css">
+        <link rel="stylesheet" href="css/monokai_sublime.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <title>Uso de code</title>
+    </head>
+    <body>
+        <header>
+            <h1>14.1.16 Uso de la etiqueta &lt;code&gt;</h1>
+        </header>
+        <nav>
+            <a href="#" class="extern">Inicio</a>
+            <a href="#" class="extern">Contactos</a>
+            <a href="#" class="extern">Ayuda</a>
+        </nav>
+        <main>
+            <section>
+                <article>
+                    <p>En este capitulo usaremos la etiqueta &lt;code&gt; con la cual podremos colocar código de algún lenguaje dentro de nuestro documento html
+                        para que el navegador no lo renderize. Antes que nada la etiqueta code se debe de usar en conjunto con la etiqueta <b>&lt;pre&gt</b>;
+                    </p>
+                    <p>Para este ejemplo estaremos usando la libreria de coloreado para codigo llamada <a href="https://highlightjs.org/"><b>highlight.js</b></a></p>
+                    <p>En este ejemplo mostraremos un código en lenguaje rust, este código imprime un arbol de navidad en la consola:</p>
+<pre>
+    <code class="language-rust">
+        extern crate ansi_term;
+        use std::io;
+        use std::io::prelude::*;
+        use ansi_term::Colour::*;
+
+        fn mlt(symbol: &str, length: i32) -&gt; String {
+            let mut string = String::from("");
+            while string.len() &lt; length as usize {
+                string.push(symbol.parse().unwrap());
+            }
+            return string;
+        }
+
+        fn print_center(message: String, length: i32, size: i32) {
+            if length &lt; size {
+                let point = (size - length) / 2;
+                println!("{}{}", mlt(" ", point), message);
+            } else {
+                println!("{}", message);
+            }
+        }
+
+        fn pause() {
+            let mut stdin = io::stdin();
+            let mut stdout = io::stdout();
+
+            // We want the cursor to stay at the end of the line, so we print without a newline and flush manually.
+            write!(stdout, "Press enter to exit...").unwrap();
+            stdout.flush().unwrap();
+
+            // Read a single byte and discard
+            let _ = stdin.read(&mut [0u8]).unwrap();
+        }
+
+        fn main() {
+            println!();
+            let spaces = 15;
+            let mut leaves = String::from("0");
+            println!("{}{}", mlt(" ", spaces), Yellow.bold().paint("X"));
+            for index in 0..spaces {
+                println!("{}{}", mlt(" ", spaces - index), Green.paint(leaves.as_str()));
+                leaves.push_str("10");
+            }
+            for _ in 0..(spaces / 2) {
+                println!("{}{}", mlt(" ", spaces - 1), RGB(153, 102, 51).paint("101"));
+            }
+            println!();
+            let mut message = "!Merry Christmas¡";
+            print_center(Yellow.paint(message).to_string(), message.len() as i32, leaves.len() as i32);
+            message = "And a happy new year";
+            print_center(Green.paint(message).to_string(), message.len() as i32, leaves.len() as i32);
+            pause();
+        }
+    </code>
+</pre>
+                </article>
+            </section>
+            <aside>
+                <a href="#" class="nav-link">Extern 1</a>
+                <a href="#" class="nav-link">Extern 2</a>
+                <a href="#" class="nav-link">Extern 3</a>
+            </aside>
+        </main>
+        <footer>
+            <span>Sitio web: <address>jhondev-code.github.io</address></span>
+            <small id="reserved">&copy;Derechos reservados 2020</small>
+        </footer>
+    </body>
+</html>
