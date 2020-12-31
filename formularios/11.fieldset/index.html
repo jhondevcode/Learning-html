@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Uso de la etiqueta fieldset">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <title>Uso de fieldset</title>
+    </head>
+    <body>
+        <header>
+            <h1>11. Uso de la etiqeta &lt;fieldset&gt;</h1>
+        </header>
+        <main>
+            <section>
+                <form class="" action="index.html" method="post">
+                    <!-- fieldset genera una caja en donde se colocan los componentes graficos -->
+                    <fieldset>
+                        <!-- legend da el nombre a la caja -->
+                        <legend>Información Personal</legend>
+                        <!-- label le da el nombre a la entrada input -->
+                        <label>Nombre: <input name='nombre' type='text' tabindex='1'></label>
+                        <label>Apellidos: <input name='apellidos' type='text' tabindex='2'></label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>edad</legend>
+                        <input type='checkbox' tabindex='20' name='edad' value='20-39' > 20-39
+                        <input type='checkbox' tabindex='21' name='edad' value='40-59' > 40-59
+                        <input type='checkbox' tabindex='22' name='edad' value='60-79' > 60-79
+                    </fieldset>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <small>&copy; Derechos reservados 2020</small>
+        </footer>
+    </body>
+</html>
