@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Mi primer formulario basico">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <title>Mi primer formulario web</title>
+    </head>
+    <body>
+        <header>
+            <h1>Complete todos los campos</h1>
+        </header>
+        <main>
+            <section>
+                <form action="process.php" method="get">
+                    <fieldset>
+                        <legend>Datos personales</legend>
+                        <label>Nombre completo: <input type="text" placeholder="Nombres y apellidos"></label>
+                        <label>Telefono: <input type="tel" placeholder="Telefono o celular"></label>
+                        <br>
+                        <label>Fecha de nacimiento: <input type="date"></label>
+                        <label>Correo: <input type="email" placeholder="example@gmail.com"></label>
+                        <br>
+                        <label>Pais de origen: <input type="text" value="+51"></label>
+                        <label>Ciudad de origen: <input type="text"></label>
+                        <br>
+                        <label>Color favorito: <input type="color"></label>
+                        <label>Ejemplo de codigo: <input type="file" accept=".py, .rb, .cpp, .c, .java, .js, .cs, .asm, .julia, .go" ></label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Datos academicos</legend>
+                        <label>Escuela: <input type="text"></label>
+                        <label>Colegio: <input type="text"></label><br>
+                        <label>Universidad: <input type="text"></label>
+                        <label>Profesión: <input list="professions" placeholder="Seleccione su profesión"></label>
+                        <datalist id="professions">
+                            <option value="Ingeniería de sistemas">
+                            <option value="Ingeniería electrónica">
+                            <option value="Ingeniería química">
+                            <option value="Ingeniería metalurgica">
+                            <option value="Ingeniería de minas">
+                            <option value="Ingeniería agroindustrial">
+                            <option value="Ingeniería forestal">
+                            <option value="Ingenieria naval">
+                            <option value="Ingeniería aeroespacial">
+                            <option value="Ingeniería genética">
+                            <option value="Ingeniería civil">
+                            <option value="Ingeniería nuclear">
+                        </datalist>
+                    </fieldset>
+                    <input type="submit">
+                </form>
+            </section>
+        </main>
+        <footer>
+            <small>&copy; Derechos Reservados 2020</small>
+        </footer>
+    </body>
+</html>
