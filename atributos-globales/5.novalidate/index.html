@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Uso del atributo novalidate">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="jhondev-code">
+        <meta name="application-name" content="Html testings">
+        <title>Uso de novalidate</title>
+        <style>
+            @charset "utf-8";
+            h1 {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Uso del atributo global novalidate</h1>
+        </header>
+        <main>
+            <section>
+                <article>
+                    <p>En este ejemplo usaremos el atributo global "novalidate" para indicarle a un formulario que no realize la validación de los datos.</p>
+                </article>
+                <form action="#" method="post" novalidate>
+                    <fieldset>
+                        <legend>Formulario de prueba</legend>
+                        <label>Nombres: <input type="text" id="user-name" placeholder="Nombres y apellidos"></label>
+                        <label>Correo: <input type="email" placeholder="Tu correo" required min="10"></label>
+                        <label>Telefono: <input type="tel" placeholder="Número de celular" min="9" max="9"></label>
+                        <label>Dirección: <input type="text" placeholder="Tu dirección"></label>
+                        <button type="submit" name="button">Enviar datos</button>
+                    </fieldset>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <small>&copy; Derechos reservados 2021</small>
+        </footer>
+    </body>
+</html>

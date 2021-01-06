@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Uso del atributo formnovalidate">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="jhondev-code">
+        <title>Uso de formnovalidate</title>
+        <style>
+            h1 {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Uso del atributo global formnovalidate</h1>
+        </header>
+        <main>
+            <section>
+                <article>
+                    <p>En este ejemplo se usará el atributo global formnovalidate con el cual le indicaremos
+                    al boton encargado de ejecutar la validacion de un formulario, paara que no valide los datos.</p>
+                </article>
+                <form action="#" method="post" novalidate>
+                    <fieldset>
+                        <legend>Formulario de prueba</legend>
+                        <label>Nombres: <input type="text" id="user-name" placeholder="Nombres y apellidos"></label>
+                        <label>Correo: <input type="email" placeholder="Tu correo" required min="10"></label>
+                        <label>Telefono: <input type="tel" placeholder="Número de celular" min="9" max="9"></label>
+                        <label>Dirección: <input type="text" placeholder="Tu dirección"></label>
+                        <!-- Aqui se usa el atributo global formnovalidate -->
+                        <button type="submit" name="button" formnovalidate>Enviar datos</button>
+                    </fieldset>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <small>&copy; Derechos reservados 2021</small>
+        </footer>
+    </body>
+</html>

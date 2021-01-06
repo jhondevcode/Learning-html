@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Uso del atributo disabled">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <title>Uso de disabled</title>
+        <style>
+            h1 {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Uso del atributo global "disabled"</h1>
+        </header>
+        <main>
+            <section>
+                <article>
+                    <p>En este ejemplo usaremos componentes activados y desactivados a traves del atributo disabled.</p>
+                </article>
+                <form action="index.html" method="get">
+                    <fieldset>
+                        <legend>Componentes de prueba</legend>
+                        <label>Nombres: <input type="text" name="user-name" placeholder="Tus nombres"></label>
+                        <label>Apellidos: <input type="text" name="user-name" placeholder="Tus apellidos" disabled="true"></label>
+                        <label>Celular: <input type="number" name="user-name" placeholder="Tu Celular" disabled></label><br>
+                        <label>Varon: <input type="radio" name="Varon" class="gender" disabled></label>
+                        <label>Mujer: <input type="radio" name="Mujer" class="gender" disabled></label>
+                    </fieldset>
+                </form>
+                <article>
+                    <p>Como se puede ver en el ejemplo anterior del formulario, los campos de entrada para <b>apellidos</b> y <b>celular</b> se encuentran deshabilitados
+                    esto debido al uso del atributo global disabled.</p>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <small>&copy; Derechos reservados 2021</small>
+        </footer>
+    </body>
+</html>
